@@ -1,0 +1,1 @@
+from schoola.modules.courses.controllers.course_controller import CourseController

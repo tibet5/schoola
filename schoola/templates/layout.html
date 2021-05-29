@@ -1,0 +1,110 @@
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Schoola" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style2.css') }}">
+
+    <title>{{ TITLE }}</title>
+	</head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <a href="/" class="nav-link"> <h2>Schoola</h2> </a>
+        </div>
+
+        <ul class="navbar-nav">
+          <p>Edu Information System</p>
+            <li class="nav-item">
+              <a href="/instructors" class="nav-link">Instructors</a>
+            </li>
+            <li class="nav-item">
+              <a href="/students" class="nav-link">Students</a>
+            </li>
+            <li class="nav-item">
+              <a href="/advisors" class="nav-link">Advisors</a>
+            </li>
+            <li class="nav-item">
+              <a href="/classrooms" class="nav-link">Classrooms</a>
+            </li>
+            <li class="nav-item">
+              <a href="/courses" class="nav-link">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a href="/departments" class="nav-link">Departments</a>
+            </li>
+            <li class="nav-item">
+              <a href="/sections" class="nav-link">Sections</a>
+            </li>
+            <li class="nav-item">
+              <a href="/teaches" class="nav-link">Teaches</a>
+            </li>
+            <li class="nav-item">
+              <a href="/time_slots" class="nav-link">Time slots</a>
+            </li>
+            <li class="nav-item">
+              <a href="/prerequirements" class="nav-link">Prerequirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/takes" class="nav-link">Takes</a>
+            </li>
+            <li class="nav-item">
+              <a href="/signals" class="nav-link">Signals</a>
+            </li>
+          </ul>
+      </nav>
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-light btn-sm">
+              <img src="{{ url_for('static', filename='img/icons/menu-outline.svg') }}" alt="Menu" width="20px">
+            </button>
+            {% if CREATE_MODEL_INSTANCE_URL %}
+            <button type="button" class="btn btn-success" onclick="window.location = '{{ CREATE_MODEL_INSTANCE_URL }}'">
+              <span>Create</span>
+            </button>
+            {% endif %}
+          </div>
+        </nav>
+
+
+      {% if message %}
+        <div class="alert alert-primary" role="alert">
+          {{ message }}
+        </div>
+      {% endif %}
+
+      {% if PAGE_HEADER %}
+        <div style="margin-bottom: 20px">
+          <h1>
+            {{ PAGE_HEADER }}
+          </h1>
+        </div>
+      {% endif %}
+
+      {% block body %}{% endblock body %}
+
+    </div>
+</div>
+
+
+
+      <!-- jQuery CDN - Slim version (=without AJAX) -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <!-- Popper.JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+      <!-- jQuery Custom Scroller CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+	</body>
+</html>

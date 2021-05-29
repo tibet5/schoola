@@ -1,0 +1,33 @@
+<tr>
+  <td>
+    <a href="{{ model_instance.ID }}">
+      {{ model_instance.ID }}
+    </a>
+  </td>
+  <td>
+    {{ model_instance.course_id }}
+  </td>
+  <td>
+    {{ model_instance.sec_id }}
+  </td>
+  <td>
+    {{ model_instance.semester }}
+  </td>
+  <td>
+    {{ model_instance.year }}
+  </td>
+  <td>
+    {{ model_instance.grade }}
+  </td>
+  <td class="btn-group">
+    <button type="button" onclick="window.location = '/takes/{{ model_instance.ID }}-{{ model_instance.course_id }}-{{ model_instance.sec_id }}-{{ model_instance.semester }}-{{ model_instance.year }}'" class="btn btn-primary">
+      Details
+    </button>
+    <button type="button" onclick="window.location = '/takes/{{  model_instance.ID }}-{{ model_instance.course_id }}-{{ model_instance.sec_id }}-{{ model_instance.semester }}-{{ model_instance.year }}/update'" class="btn btn-warning">
+      Update
+    </button>
+    <button type="button" onclick="window.location = '/takes/{{  model_instance.ID }}-{{ model_instance.course_id }}-{{ model_instance.sec_id }}-{{ model_instance.semester }}-{{ model_instance.year }}/delete'" class="btn btn-danger">
+      Delete
+    </button>
+  </td>
+</tr>

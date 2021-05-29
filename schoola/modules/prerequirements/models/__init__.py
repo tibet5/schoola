@@ -1,0 +1,1 @@
+from schoola.modules.prerequirements.models.prerequirement import Prerequirement

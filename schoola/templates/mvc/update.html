@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  {% if model_instance %}
+    {% block details %}
+    {% endblock details %}
+  {% else %}
+    <h1>
+      Not found!
+    </h1>
+  {% endif %}
+{% endblock body %}

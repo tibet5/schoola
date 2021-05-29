@@ -1,0 +1,1 @@
+from schoola.modules.time_slots.controllers.time_slot_controller import TimeSlotController

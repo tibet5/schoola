@@ -1,0 +1,115 @@
+{% extends BASE_TEMPLATE_NAME %}
+
+{% block details %}
+  {{ super() }}
+
+<nav class="navbar navbar-light bg-light">
+  <form method="POST" action="" class="form-inline">
+    <table>
+      <tbody>
+      <tr>
+          <td>
+            Time Slot ID
+          </td>
+          <td>
+            <input
+              maxlength="4"
+              class="form-control"
+              type="text"
+              name="time_slot_id"
+              {% if model_instance %} value="{{ model_instance.time_slot_id }}" {% endif %}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Day
+          </td>
+          <td>
+            <input
+              maxlength="1"
+              class="form-control"
+              type="text"
+              name="day"
+              {% if model_instance %} value="{{ model_instance.day }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Start Hour
+          </td>
+          <td>
+            <input
+              maxlength="2"
+              class="form-control"
+              type="text"
+              name="start_hr"
+              {% if model_instance %} value="{{ model_instance.start_hr }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Start Minute
+          </td>
+          <td>
+            <input
+              maxlength="2"
+              class="form-control"
+              type="text"
+              name="start_min"
+              {% if model_instance %} value="{{ model_instance.start_min }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            End Hour
+          </td>
+          <td>
+            <input
+              maxlength="2"
+              class="form-control"
+              type="text"
+              name="end_hr"
+              {% if model_instance %} value="{{ model_instance.end_hr }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            End Minute
+          </td>
+          <td>
+            <input
+              maxlength="2"
+              class="form-control"
+              type="text"
+              name="end_min"
+              {% if model_instance %} value="{{ model_instance.end_min }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <td></td>
+          <td>
+            <button
+              class="btn btn-outline-success btn-md"
+              type="submit"
+            >
+              Save
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</nav>
+{% endblock details %}

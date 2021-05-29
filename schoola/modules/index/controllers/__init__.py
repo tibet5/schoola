@@ -1,0 +1,1 @@
+from schoola.modules.index.controllers.index_controller import IndexController

@@ -1,0 +1,27 @@
+<tr>
+  <td>
+    <a href="{{ model_instance.ID }}">
+      {{ model_instance.ID }}
+    </a>
+  </td>
+  <td>
+    {{ model_instance.name }}
+  </td>
+  <td>
+    {{ model_instance.dept_name }}
+  </td>
+  <td>
+    {{ model_instance.tot_cred }}
+  </td>
+  <td class="btn-group">
+    <button type="button" onclick="window.location = '/students/{{ model_instance.ID }}'" class="btn btn-primary">
+      Details
+    </button>
+    <button type="button" onclick="window.location = '/students/{{ model_instance.ID }}/update'" class="btn btn-warning">
+      Update
+    </button>
+    <button type="button" onclick="window.location = '/students/{{ model_instance.ID }}/delete'" class="btn btn-danger">
+      Delete
+    </button>
+  </td>
+</tr>

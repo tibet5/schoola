@@ -1,0 +1,71 @@
+{% extends BASE_TEMPLATE_NAME %}
+
+{% block details %}
+  {{ super() }}
+
+<nav class="navbar navbar-light bg-light">
+  <form method="POST" action="" class="form-inline">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            Department Name
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="dept_name"
+              {% if model_instance %} value="{{ model_instance.dept_name }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Building
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="building"
+              {% if model_instance %} value="{{ model_instance.building }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Budget
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="number"
+              name="budget"
+              step="1"
+              min="0"
+              {% if model_instance %} value="{{ model_instance.budget }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <td></td>
+          <td>
+            <button
+              class="btn btn-outline-success btn-md"
+              type="submit"
+            >
+              Save
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</nav>
+
+{% endblock details %}

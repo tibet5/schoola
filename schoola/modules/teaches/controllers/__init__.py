@@ -1,0 +1,1 @@
+from schoola.modules.teaches.controllers.teaches_controller import TeachesController

@@ -1,0 +1,117 @@
+{% extends BASE_TEMPLATE_NAME %}
+
+{% block details %}
+  {{ super() }}
+
+<nav class="navbar navbar-light bg-light">
+  <form method="POST" action="">
+    <table>
+      <tbody>
+
+      <tr>
+          <td>
+            ID
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="ID"
+              {% if model_instance %} value="{{ model_instance.ID }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Course ID
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="course_id"
+              {% if model_instance %} value="{{ model_instance.course_id }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Sec ID
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="sec_id"
+              {% if model_instance %} value="{{ model_instance.sec_id }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Semester
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="semester"
+              step="1"
+              min="0"
+              {% if model_instance %} value="{{ model_instance.semester }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Year
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="integer"
+              name="year"
+              step="1"
+              min="0"
+              {% if model_instance %} value="{{ model_instance.year }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Grade
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="grade"
+              step="1"
+              min="0"
+              {% if model_instance %} value="{{ model_instance.grade }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <td></td>
+          <td>
+            <button
+              class="btn btn-outline-success btn-md"
+              type="submit"
+            >
+              Save
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</nav>
+{% endblock details %}

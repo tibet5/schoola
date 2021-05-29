@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  {% block list %}
+    <table class="table" style="width: 50vw">
+      {% include THEAD_TEMPLATE_NAME %}
+
+      <tbody>
+        {% block tbody %}
+          {% for model_instance in model_instances %}
+            {% include TD_TEMPLATE_NAME with context %}
+          {% endfor %}
+        {% endblock tbody %}
+      </tbody>
+    </table>
+
+  {% endblock list %}
+{% endblock body %}

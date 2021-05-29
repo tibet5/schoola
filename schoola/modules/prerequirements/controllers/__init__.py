@@ -1,0 +1,1 @@
+from schoola.modules.prerequirements.controllers.prerequirements_controller import PrerequirementController

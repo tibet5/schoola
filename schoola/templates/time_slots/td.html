@@ -1,0 +1,33 @@
+<tr>
+  <td>
+    <a href="{{ model_instance.time_slot_id }}">
+      {{ model_instance.time_slot_id }}
+    </a>
+  </td>
+  <td>
+    {{ model_instance.day }}
+  </td>
+  <td>
+    {{ model_instance.start_hr }}
+  </td>
+  <td>
+    {{ model_instance.start_min }}
+  </td>
+  <td>
+    {{ model_instance.end_hr }}
+  </td>
+  <td>
+    {{ model_instance.end_min }}
+  </td>
+  <td class="btn-group">
+    <button type="button" onclick="window.location = '/time_slots/{{ model_instance.time_slot_id }}-{{ model_instance.day }}'" class="btn btn-primary">
+      Details
+    </button>
+    <button type="button" onclick="window.location = '/time_slots/{{ model_instance.time_slot_id }}-{{ model_instance.day }}/update'" class="btn btn-warning">
+      Update
+    </button>
+    <button type="button" onclick="window.location = '/time_slots/{{ model_instance.time_slot_id }}-{{ model_instance.day }}/delete'" class="btn btn-danger">
+      Delete
+    </button>
+  </td>
+</tr>

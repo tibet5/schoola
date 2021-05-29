@@ -1,0 +1,23 @@
+<tr>
+  <td>
+    <a href="{{ model_instance.course_id }}">
+      {{ model_instance.course_id }}
+    </a>
+  </td>
+
+  <td>
+    {{ model_instance.prereq_id }}
+  </td>
+
+  <td class="btn-group">
+    <button type="button" onclick="window.location = '/prerequirements/{{ model_instance.course_id }}-{{ model_instance.prereq_id }}'" class="btn btn-primary">
+      Details
+    </button>
+    <button type="button" onclick="window.location = '/prerequirements/{{ model_instance.course_id }}-{{ model_instance.prereq_id }}/update'" class="btn btn-warning">
+      Update
+    </button>
+    <button type="button" onclick="window.location = '/prerequirements/{{ model_instance.course_id }}-{{ model_instance.prereq_id }}/delete'" class="btn btn-danger">
+      Delete
+    </button>
+  </td>
+</tr>

@@ -1,0 +1,24 @@
+<tr>
+  <td>
+    <a href="{{ model_instance.room_number }}">
+      {{ model_instance.room_number }}
+    </a>
+  </td>
+  <td>
+    {{ model_instance.building }}
+  </td>
+  <td>
+    {{ model_instance.capacity }}
+  </td>
+  <td class="btn-group">
+    <button type="button" onclick="window.location = '/classrooms/{{ model_instance.room_number }}-{{ model_instance.building }}'" class="btn btn-primary">
+      Details
+    </button>
+    <button type="button" onclick="window.location = '/classrooms/{{ model_instance.room_number }}-{{ model_instance.building }}/update'" class="btn btn-warning">
+      Update
+    </button>
+    <button type="button" onclick="window.location = '/classrooms/{{ model_instance.room_number }}-{{ model_instance.building }}/delete'" class="btn btn-danger">
+      Delete
+    </button>
+  </td>
+</tr>

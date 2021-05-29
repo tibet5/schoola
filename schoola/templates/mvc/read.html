@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  {% if model_instance %}
+    {% block details %}
+      <table border="2" style="width: 50vw">
+        {% include THEAD_TEMPLATE_NAME %}
+
+        <tbody>
+          {% block tbody %}
+            {% include TD_TEMPLATE_NAME %}
+          {% endblock tbody %}
+        </tbody>
+      </table>
+
+    {% endblock details %}
+  {% else %}
+    <h1>
+      Not found!
+    </h1>
+  {% endif %}
+{% endblock body %}

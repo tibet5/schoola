@@ -1,0 +1,83 @@
+{% extends BASE_TEMPLATE_NAME %}
+
+{% block details %}
+  {{ super() }}
+
+<nav class="navbar navbar-light bg-light">
+  <form method="POST" action="">
+    <table>
+      <tbody>
+      <tr>
+          <td>
+            ID
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="integer"
+              name="ID"
+              {% if model_instance %} value="{{ model_instance.ID }}" {% endif %}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Name
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="name"
+              {% if model_instance %} value="{{ model_instance.name }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Department Name
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              name="dept_name"
+              {% if model_instance %} value="{{ model_instance.dept_name }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Total Credit
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="integer"
+              name="tot_cred"
+              step="1"
+              min="0"
+              {% if model_instance %} value="{{ model_instance.tot_cred }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <td></td>
+          <td>
+            <button
+              class="btn btn-outline-success btn-md"
+              type="submit"
+            >
+              Save
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</nav>
+{% endblock details %}
