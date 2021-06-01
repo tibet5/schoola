@@ -15,6 +15,7 @@ class Database(object):
     def migrate(cls):
         import schoola.modules.instructors.models
         import schoola.modules.students.models
+        import schoola.modules.advisors.models
         import schoola.modules.classrooms.models
         import schoola.modules.courses.models
         import schoola.modules.departments.models

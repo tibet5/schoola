@@ -1,0 +1,27 @@
+<tr>
+  <td>
+    <a href="{{ model_instance.s_ID }}">
+      {{ model_instance.s_ID }}
+    </a>
+  </td>
+  <td>
+    {{ model_instance.i_ID }}
+  </td>
+  <td>
+    {{ model_instance.s_name }}
+  </td>
+  <td>
+    {{ model_instance.i_name }}
+  </td>
+  <td class="btn-group">
+    <button type="button" onclick="window.location = '/advisors/{{ model_instance.s_ID }}-{{ model_instance.i_ID }}'" class="btn btn-primary">
+      Details
+    </button>
+    <button type="button" onclick="window.location = '/advisors/{{ model_instance.s_ID }}-{{ model_instance.i_ID }}/update'" class="btn btn-warning">
+      Update
+    </button>
+    <button type="button" onclick="window.location = '/advisors/{{ model_instance.s_ID }}-{{ model_instance.i_ID }}/delete'" class="btn btn-danger">
+      Delete
+    </button>
+  </td>
+</tr>

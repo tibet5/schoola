@@ -1,0 +1,1 @@
+from schoola.modules.advisors.controllers.advisor_controller import AdvisorController

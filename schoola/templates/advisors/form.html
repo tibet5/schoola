@@ -1,0 +1,59 @@
+{% extends BASE_TEMPLATE_NAME %}
+
+{% block details %}
+  {{ super() }}
+
+<nav class="navbar navbar-light bg-light">
+  <form method="POST" action="">
+    <table>
+      <tbody>
+
+        <tr>
+          <td>
+            Student ID
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="integer"
+              name="s_ID"
+              step="1"
+              min="0"
+              {% if model_instance %} value="{{ model_instance.s_ID }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Instructor ID
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="integer"
+              name="i_ID"
+              step="1"
+              min="0"
+              {% if model_instance %} value="{{ model_instance.i_ID }}" {% endif %}
+            />
+          </td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <td></td>
+          <td>
+            <button
+              class="btn btn-outline-success btn-md"
+              type="submit"
+            >
+              Save
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</nav>
+{% endblock details %}

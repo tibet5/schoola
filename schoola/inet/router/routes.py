@@ -2,6 +2,7 @@ from schoola.arch.mvc.helpers import MVCRoutingHelper
 import schoola.modules.index.controllers as index_controllers
 import schoola.modules.instructors.controllers as instructors_controllers
 import schoola.modules.students.controllers as students_controllers
+import schoola.modules.advisors.controllers as advisors_controllers
 import schoola.modules.classrooms.controllers as classrooms_controllers
 import schoola.modules.courses.controllers as courses_controllers
 import schoola.modules.departments.controllers as departments_controllers
@@ -33,6 +34,11 @@ ROUTES = [
         base_name='students',
         base_path='/students',
         controller_class=students_controllers.StudentController,
+    ),
+    *MVCRoutingHelper.build_crudl_routes(
+        base_name='advisors',
+        base_path='/advisors',
+        controller_class=advisors_controllers.AdvisorController,
     ),
     *MVCRoutingHelper.build_crudl_routes(
         base_name='classrooms',
